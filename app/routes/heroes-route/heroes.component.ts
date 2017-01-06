@@ -1,21 +1,18 @@
 import { Component } from '@angular/core';
-import { Hero } from '../classes/hero';
-import { HeroService } from '../services/hero.service';
+import { Hero } from '../../classes/hero';
+import { HeroService } from '../../services/hero.service';
 import { OnInit } from '@angular/core';
 
-
 @Component({
-  selector: 'my-app',
+  selector: 'my-heroes',
   moduleId: module.id,
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.css'],
-  providers: [ HeroService ]
+  templateUrl: 'heroes.component.html',
+  styleUrls: ['heroes.component.css']
 })
-export class AppComponent implements OnInit {
-  title = 'Tour of Heroes';
+export class HeroesComponent implements OnInit {
+  title: string = 'Tour of Heroes';
   heroes: Hero[]; 
   selectedHero :Hero = null;
-  imageUrl = 'http://www.wildwomanfundraising.com/wp-content/uploads/2012/04/puppet-gadget.jpg';
 
   //SERVICES
   constructor(private heroService: HeroService) { }
