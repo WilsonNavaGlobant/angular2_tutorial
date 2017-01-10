@@ -12,7 +12,7 @@ import { OnInit } from '@angular/core';
 export class HeroesComponent implements OnInit {
   title: string = 'Tour of Heroes';
   heroes: Hero[]; 
-  selectedHero :Hero = null;
+  selectedHero: Hero = null;
 
   //SERVICES
   constructor(private heroService: HeroService) { }
